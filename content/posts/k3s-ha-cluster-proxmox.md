@@ -63,6 +63,11 @@ Both nodes were confirmed `Ready`:
 sudo k3s kubectl get nodes
 ```
 
+```
+NAME           STATUS   ROLES                       AGE   VERSION
+k3s-server1    Ready    control-plane,etcd,master    10m   v1.x.x
+k3s-server2    Ready    control-plane,etcd,master    3m    v1.x.x
+```
 
 ## Testing Redundancy
 
@@ -79,6 +84,11 @@ Kubernetes scheduled one pod per node automatically:
 sudo k3s kubectl get pods -o wide
 ```
 
+```
+NAME                      READY   STATUS    RESTARTS   AGE   IP           NODE
+mysite-6d4b8f7c9d-abcde   1/1     Running   0          2m    10.42.0.5    k3s-server1
+mysite-6d4b8f7c9d-fghij   1/1     Running   0          2m    10.42.1.6    k3s-server2
+```
 
 I then shut down one VM entirely and confirmed the site stayed reachable — the surviving node's pod kept serving traffic through the Service without any manual intervention.
 
