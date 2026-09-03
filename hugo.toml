@@ -6,6 +6,10 @@ theme = "PaperMod"
 [params]
   description = "Homelab, security, and infrastructure projects"
 
+  [params.homeInfoParams]
+    Title = "Hi, I'm RJ 👋"
+    Content = "Building infrastructure skills through hands-on homelab projects — Proxmox, Kubernetes, and self-hosted deployments. Explore the writeups below or check out my [full background](/about/)."
+
 [[menu.main]]
   name = "Home"
   url = "/"
