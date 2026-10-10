@@ -1,4 +1,4 @@
-baseURL = "http://portfolio.homelab.local/"
+baseURL = "https://rjabaya.github.io/my-portfolio/"
 languageCode = "en-us"
 title = "RJ Abaya | Portfolio"
 theme = "PaperMod"
